@@ -1,0 +1,60 @@
+body {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.disabled {
+  filter: grayscale(1);
+  position: relative;
+}
+.disabled::before {
+  content: "";
+  right: -10px;
+  top: -23px;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-image: url("soon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.logo {
+  max-width: 110px;
+  margin-bottom: 40px;
+}
+
+.wheretobuy {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 25px;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
+}
+.wheretobuy .box {
+  width: 300px;
+  height: 70px;
+}
+.wheretobuy .box img {
+  width: 300px;
+  height: 70px;
+  border-radius: 10px;
+}
+
+a img {
+  transition: all 0.3s ease;
+  box-shadow: 0px 0px 0px 0px #F40F21;
+}
+a:hover img {
+  box-shadow: 0px 0px 15px 1px #F40F21;
+  transform: scale(1.06);
+}/*# sourceMappingURL=styles.css.map */
