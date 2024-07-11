@@ -1,6 +1,9 @@
 body {
   max-width: 1140px;
   margin: 0 auto;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .container {
@@ -12,19 +15,29 @@ body {
 }
 
 .disabled {
-  filter: grayscale(1);
   position: relative;
 }
-.disabled::before {
-  content: "";
+
+.disabled img {
+  filter: grayscale(.9);
+}
+
+.disabled::after {
+  color: white;
+  content: 'Скоро';
+  background: rgb(12, 80, 63);
+  border-radius: 10px;
   right: -10px;
-  top: -23px;
+  top: -10px;
   position: absolute;
-  width: 60px;
-  height: 60px;
-  background-image: url("soon.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+  width: max-content;
+  height: 20px;
+  padding: 1px 9px;
+}
+
+.disabled.soon::after {
+  content: 'Очень скоро';
+  background: rgb(0, 153, 64);
 }
 
 .logo {
@@ -55,4 +68,4 @@ a img {
 }
 a:hover img {
   transform: scale(1.06);
-}/*# sourceMappingURL=styles.css.map */
+} /*# sourceMappingURL=styles.css.map */
