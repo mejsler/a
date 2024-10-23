@@ -36,7 +36,7 @@ body {
 }
 
 .disabled.soon::after {
-  content: 'Очень скоро';
+  content: 'Скоро';
   background: rgb(0, 153, 64);
 }
 
